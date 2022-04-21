@@ -1,0 +1,18 @@
+seed: 10086
+task: l2x
+train: False
+original:
+  wandb_project: Original
+  wandb_entity: franciscop9
+  epochs: 2
+  batch: 40
+  optimizer: adam
+  lr: 0.001
+l2x:
+  wandb_project: L2X_PyTorch
+  wandb_entity: franciscop9
+  epochs: 2
+  batch: 40
+  optimizer: adam
+  lr: 0.001
+  k: 10
