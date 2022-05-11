@@ -1,8 +1,5 @@
-import pandas as pd
 import numpy as np
-import _pickle as pickle
-import os
-import csv
+
 
 
 def get_selected_words(x_single, score, id_to_word, k):

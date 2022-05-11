@@ -108,7 +108,7 @@ class QParameterization(nn.Module):
         super(QParameterization, self).__init__()
         self.k = k
         self.emb = nn.Embedding(vocab_size, embed_dim)
-        self.Multiply = LambdaLayer(lambda x, y: torch.mul(x, y) / float(k))
+        self.Multiply = LambdaLayer(lambda x, y: torch.mul(x, y))
         self.Mean = LambdaLayer(lambda x: torch.sum(x, dim=-1) / float(k))
         self.fc1 = nn.Linear(embed_dim, hidden_dims)
         self.fc2 = nn.Linear(hidden_dims, 2)
